@@ -27,41 +27,16 @@
         <input type="txt" placeholder="Filter your todos">
         <div class="toDoList"  ng-repeat="item in todo.todo track by $index">
             <ol>
-                <li>{{item}}</li>
+                <li><button id="complete" >Complete</button>  {{item}} <button id="xBtn"><img src="images/x1.png"/></button> </li>
             </ol>
         </div>
         <input type="text"  placeholder = "Add your todo">
         <button type="button" id="bad">Add</button>
     </form>
 </section>
-      <!-- <section class="container">
-          
-        <form>
-            <h1>TODO list</h1>
-            <p>A place to store the things you need to do </p>
-            <input type="text">
-            <div>
-
-            </div>
-            <input type="text">
-            <section id="button">
-                <button>Add</button>
-            </section>
-        </form>
-
-    
-
-      </section> -->
+      
 
 
-
-
-
-
-
-
-
-   
     <script src = "https://code.angularjs.org/1.6.5/angular.min.js"></script>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
     <script src="scripts/module.js"></script>
