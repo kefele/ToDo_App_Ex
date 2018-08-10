@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- font-family: 'Lato', sans-serif; -->
+    <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
+    <!-- font-family: 'Fondamento', cursive;-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   
+
+    <section id="bForm" ng-controller="TodoController as todo">
+     
+        
+    <form id="bDis">
+            <h2>TODO list</h2>
+        <p>A place to store the things you need to do</p>
+       
+        <input type="txt" placeholder="Filter your todos">
+        <div class="toDoList"  ng-repeat="item in todo.todo track by $index">
+            <ol>
+                <li>{{item}}</li>
+            </ol>
+        </div>
+        <input type="text"  placeholder = "Add your todo">
+        <button type="button" id="bad">Add</button>
+    </form>
+</section>
+      <!-- <section class="container">
+          
+        <form>
+            <h1>TODO list</h1>
+            <p>A place to store the things you need to do </p>
+            <input type="text">
+            <div>
+
+            </div>
+            <input type="text">
+            <section id="button">
+                <button>Add</button>
+            </section>
+        </form>
+
+    
+
+      </section> -->
+
+
+
+
+
+
+
+
+
+   
+    <script src = "https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script src="scripts/module.js"></script>
+    <script src="scripts/ctrl.js"></script>
+</body>
+
+</html>
