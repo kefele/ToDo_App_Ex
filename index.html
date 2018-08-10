@@ -31,11 +31,11 @@
         <input type="txt" placeholder="Filter your todos" >
         <!-- <div class="toDoList"  > -->
             <ol >
-                <li ng-repeat="item in todo.todo"  ng-class="item.classes" ><button id="complete" ng-if="!item.classes.completed" >Complete</button>  {{item.task}} <div class="X">X</div></li>
+                <li ng-repeat="item in todo.todo"  ng-class="item.classes" ><button class="completeBtn" ng-if="!item.classes.completed" >Complete</button>  {{item.task}} <div class="X">X</div></li>
             </ol>
         <!-- </div> -->
         <input type="text"  placeholder = "Add your todo" ng-model="newTdo">
-        <button type="button">Add</button>
+        <button type="button" class="add">Add</button>
     </form>
 </section>
       

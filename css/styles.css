@@ -27,5 +27,51 @@ h2, p, li{
     font-family: 'Open Sans', sans-serif;
 }
 input{
-    margin: 20px
+    margin: 20px;
+    height: 35px;
+    border: solid #eee 1px;
+    border-radius: 5px;
 }
+.add{
+    font-family: 'Open Sans', sans-serif;
+    color: #eee;
+    background: #ff1493;
+    border-radius: 5px;
+    border-style: none;
+    height: 35px;
+    cursor: pointer;
+}
+.completeBtn{
+    background-color:white;
+    color: #ff69b4;
+    border-radius:5px;
+    border:1px solid;
+    
+    padding:3px;
+    margin:3px;
+}
+
+.X{
+    float: right;
+    cursor: pointer;
+}
+.X
+
+li{
+    margin: 20px;
+}
+
+li:hover{
+    background: grey;
+}
+li:hover > .X{
+    color: red;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+
+
+
