@@ -6,32 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!-- font-family: 'Lato', sans-serif; -->
-    <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
-    <!-- font-family: 'Fondamento', cursive;-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-   
 
-    <section id="bForm" ng-controller="TodoController as todo">
+    <!-- <section ng-controller="FoodCtrl as food">
+
+        <form ng-submit="food.addItem(newItem);">
+          <input type="text" ng-model="newItem.name">
+          <input type="number" ng-model="newItem.price">
+          <button>Add Item</button>
+        </form> -->
+
+    <section class="container" ng-controller="TodoController as todo">
      
         
-    <form id="bDis">
+    <form class="dis" ng-submit="todo.addTdo(newTdo)">
             <h2>TODO list</h2>
         <p>A place to store the things you need to do</p>
        
-        <input type="txt" placeholder="Filter your todos">
-        <div class="toDoList"  ng-repeat="item in todo.todo track by $index">
-            <ol>
-                <li><button id="complete" >Complete</button>  {{item}} <button id="xBtn"><img src="images/x1.png"/></button> </li>
+        <input type="txt" placeholder="Filter your todos" >
+        <!-- <div class="toDoList"  > -->
+            <ol >
+                <li ng-repeat="item in todo.todo"  ng-class="item.classes" ><button id="complete" ng-if="!item.classes.completed" >Complete</button>  {{item.task}} <div class="X">X</div></li>
             </ol>
-        </div>
-        <input type="text"  placeholder = "Add your todo">
-        <button type="button" id="bad">Add</button>
+        <!-- </div> -->
+        <input type="text"  placeholder = "Add your todo" ng-model="newTdo">
+        <button type="button">Add</button>
     </form>
 </section>
       
