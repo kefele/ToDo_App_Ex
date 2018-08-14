@@ -28,14 +28,14 @@
             <h2>TODO list</h2>
         <p>A place to store the things you need to do</p>
        
-        <input type="txt" placeholder="Filter your todos" >
+        <input type="txt" ng-model="filterList" placeholder="Filter your todos" >
         <!-- <div class="toDoList"  > -->
             <ol >
-                <li ng-repeat="item in todo.todo"  ng-class="item.classes" ><button class="completeBtn" ng-if="!item.classes.completed" >Complete</button>  {{item.task}} <div class="X">X</div></li>
+                <li ng-class="item.classes" ng-repeat="item in todo.todo  | filter: filterList" ><button class="completeBtn" ng-if="!item.classes.completed" ng-click="todo.completeTask($index)" >Complete</button>  {{item.task}} <div class="X" ng-click="todo.deleteTask($index)">X</div></li>
             </ol>
         <!-- </div> -->
         <input type="text"  placeholder = "Add your todo" ng-model="newTdo">
-        <button type="button" class="add">Add</button>
+        <button type="button" ng-click="todo.addTask(newTdo); newTdo=''" class="add">Add</button>
     </form>
 </section>
       

@@ -24,12 +24,19 @@ function TodoController(){
 vm.completeTask= (index)=>{
     vm.todo[index].classes = {completed: true};
 }
+vm.deleteTask = (index) => {
+    vm.todo.splice(index,1);
+    
+};
 
 
-vm.addTdo = (newTdo) => {
+vm.addTask = (task) => {
        
-            vm.todo.unshift(newTdo);
-            console.log(newTdo);
+            vm.todo.push({
+                task:task,
+                classes:{completed:false}
+            });
+           
         };
 
     };
